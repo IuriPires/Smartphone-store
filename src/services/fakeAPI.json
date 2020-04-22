@@ -1,0 +1,57 @@
+[
+  {
+    "product": {
+      "name": "Redmi Note 8",
+      "brand": "Xiaomi",
+      "colors": ["Purple", "Red", "Black"],
+      "storage": ["16Gb", "32Gb", "64Gb"]
+    },
+    "values": ["R$1100,00", "R$1300,00", "R$1450,00"],
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5Wg3H2-b_7cOU1ZUKcPZ_nRXb4d3uZfkG1xUKC1np9_SgQNN31_fzitRIt89FV94AV40jBnLS&usqp=CAc",
+    "id": 1
+  },
+  {
+    "product": {
+      "name": "Redmi Note 8",
+      "brand": "Xiaomi",
+      "colors": ["Purple", "Red", "Black"],
+      "storage": ["16Gb", "32Gb", "64Gb"]
+    },
+    "values": ["R$1100,00", "R$1300,00", "R$1450,00"],
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5Wg3H2-b_7cOU1ZUKcPZ_nRXb4d3uZfkG1xUKC1np9_SgQNN31_fzitRIt89FV94AV40jBnLS&usqp=CAc",
+    "id": 2
+  },
+  {
+    "product": {
+      "name": "Redmi Note 8",
+      "brand": "Xiaomi",
+      "colors": ["Purple", "Red", "Black"],
+      "storage": ["16Gb", "32Gb", "64Gb"]
+    },
+    "values": ["R$1100,00", "R$1300,00", "R$1450,00"],
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5Wg3H2-b_7cOU1ZUKcPZ_nRXb4d3uZfkG1xUKC1np9_SgQNN31_fzitRIt89FV94AV40jBnLS&usqp=CAc",
+    "id": 3
+  },
+  {
+    "product": {
+      "name": "Redmi Note 8",
+      "brand": "Xiaomi",
+      "colors": ["Purple", "Red", "Black"],
+      "storage": ["16Gb", "32Gb", "64Gb"]
+    },
+    "values": ["R$1100,00", "R$1300,00", "R$1450,00"],
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5Wg3H2-b_7cOU1ZUKcPZ_nRXb4d3uZfkG1xUKC1np9_SgQNN31_fzitRIt89FV94AV40jBnLS&usqp=CAc",
+    "id": 4
+  },
+  {
+    "product": {
+      "name": "Redmi Note 8",
+      "brand": "Xiaomi",
+      "colors": ["Purple", "Red", "Black"],
+      "storage": ["16Gb", "32Gb", "64Gb"]
+    },
+    "values": ["R$1100,00", "R$1300,00", "R$1450,00"],
+    "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5Wg3H2-b_7cOU1ZUKcPZ_nRXb4d3uZfkG1xUKC1np9_SgQNN31_fzitRIt89FV94AV40jBnLS&usqp=CAc",
+    "id": 5
+  }
+]
