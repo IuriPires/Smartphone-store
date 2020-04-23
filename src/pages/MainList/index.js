@@ -1,33 +1,11 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View} from 'react-native';
+import {styles} from './style';
 import ListItem from './../../components/ListItem';
 import data from './../../services/fakeAPI.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function MainList() {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-    containerList: {
-      paddingHorizontal: 6,
-      marginTop: 10,
-    },
-    header: {
-      backgroundColor: '#000',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'row',
-    },
-    headerText: {
-      fontSize: 24,
-      color: '#FFF',
-      letterSpacing: 1.2,
-      fontWeight: 'bold',
-      marginLeft: 12,
-      padding: 20,
-    },
-  });
   return (
     <View style={styles.container}>
       <View style={styles.header}>

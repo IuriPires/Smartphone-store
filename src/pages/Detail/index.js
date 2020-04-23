@@ -1,16 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useNavigation, useRoute} from '@react-navigation/native';
-import {
-  View,
-  Share,
-  Text,
-  TouchableOpacity,
-  Image,
-  StyleSheet,
-  Picker,
-} from 'react-native';
+import {View, Share, Text, TouchableOpacity, Image, Picker} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import IconAw from 'react-native-vector-icons/MaterialIcons';
+import {styles} from './style';
 Icon.loadFont();
 import {ScrollView} from 'react-native-gesture-handler';
 import Button from './../../components/Button';
@@ -30,77 +23,6 @@ export default function Detail() {
       message: 'Aqui o produto seria compartilhado',
     });
   }
-
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-    backIconView: {
-      width: '100%',
-      justifyContent: 'flex-start',
-      alignItems: 'center',
-      flexDirection: 'row',
-      marginLeft: 6,
-    },
-    backIcon: {
-      width: 35,
-    },
-    imageView: {
-      flex: 5,
-      backgroundColor: '#FFF',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    image: {
-      width: 250,
-      height: 250,
-      marginTop: 10,
-    },
-    detailsView: {
-      flex: 4,
-      backgroundColor: '#FFF',
-      marginTop: 15,
-    },
-    macroDetails: {
-      marginTop: 75,
-      width: '100%',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'flex-start',
-    },
-    textDetailName: {
-      fontSize: 18,
-      marginLeft: 10,
-    },
-    textDetailValue: {
-      marginTop: 6,
-      marginBottom: 20,
-      fontSize: 24,
-      marginLeft: 10,
-      color: '#ef6537',
-    },
-    detailsInputView: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      padding: 10,
-    },
-    picker: {
-      height: 50,
-      width: 150,
-    },
-    buttonContainer: {
-      marginTop: 150,
-      backgroundColor: '#FFF',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: 5,
-      flex: 6,
-    },
-    buttonText: {
-      color: '#FFF',
-    },
-  });
 
   return (
     <ScrollView style={styles.container}>
@@ -131,11 +53,13 @@ export default function Detail() {
           <Picker
             selectedValue={selectedValue}
             style={styles.picker}
-            onValueChange={(itemValue, itemIndex) =>
-              setSelectedValue(itemValue)
-            }>
+            onValueChange={itemValue => setSelectedValue(itemValue)}>
             {details.product.storage.map(storageSize => (
-              <Picker.Item label={storageSize} value={storageSize} />
+              <Picker.Item
+                key={storageSize}
+                label={storageSize}
+                value={storageSize}
+              />
             ))}
           </Picker>
         </View>
@@ -145,11 +69,9 @@ export default function Detail() {
           <Picker
             selectedValue={selectedValue}
             style={styles.picker}
-            onValueChange={(itemValue, itemIndex) =>
-              setSelectedValue(itemValue)
-            }>
+            onValueChange={itemValue => setSelectedValue(itemValue)}>
             {details.product.colors.map(color => (
-              <Picker.Item label={color} value={color} />
+              <Picker.Item key={color} label={color} value={color} />
             ))}
           </Picker>
         </View>
