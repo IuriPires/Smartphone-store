@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 export default function Button({
@@ -30,3 +31,11 @@ export default function Button({
     </TouchableOpacity>
   );
 }
+
+Button.propTypes = {
+  backgroundColor: PropTypes.string,
+  width: PropTypes.number,
+  textPadding: PropTypes.string,
+  children: PropTypes.node,
+  borderRadius: PropTypes.number,
+};

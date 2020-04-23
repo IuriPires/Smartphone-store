@@ -3,6 +3,7 @@ import {useNavigation} from '@react-navigation/native';
 import {View, Text, FlatList, SafeAreaView, Image} from 'react-native';
 import {styles} from './style';
 import Button from './../../components/Button';
+import createGrid from './../../utils/createGrid';
 
 export default function ListItem({data}) {
   const collums = 2;
@@ -12,26 +13,10 @@ export default function ListItem({data}) {
     navigation.navigate('Detail', {details});
   }
 
-  function createRows(data, columns) {
-    const rows = Math.floor(data.length / columns); // [A]
-    let lastRowElements = data.length - rows * columns; // [B]
-    while (lastRowElements !== columns) {
-      // [C]
-      data.push({
-        // [D]
-        id: `empty-${lastRowElements}`,
-        name: `empty-${lastRowElements}`,
-        empty: true,
-      });
-      lastRowElements += 1; // [E]
-    }
-    return data; // [F]
-  }
-
   return (
     <SafeAreaView>
       <FlatList
-        data={createRows(data, collums)}
+        data={createGrid(data, collums)}
         keyExtractor={item => item.id}
         numColumns={collums}
         renderItem={({item}) => {
