@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 export default function Button({
-  backgroundColor = '#ef6537',
-  width = 120,
-  textPadding = 4,
+  backgroundColor,
+  width,
+  textPadding,
   onPress,
   children,
-  borderRadius = 20,
+  borderRadius,
 }) {
+  console.log(backgroundColor, 'Iuri');
   const styles = StyleSheet.create({
     button: {
       backgroundColor: backgroundColor,
@@ -32,10 +33,10 @@ export default function Button({
   );
 }
 
-Button.propTypes = {
-  backgroundColor: PropTypes.string,
-  width: PropTypes.number,
-  textPadding: PropTypes.string,
-  children: PropTypes.node,
-  borderRadius: PropTypes.number,
-};
+// Button.propTypes = {
+//   backgroundColor: PropTypes.string,
+//   width: PropTypes.number,
+//   textPadding: PropTypes.number,
+//   children: PropTypes.node,
+//   borderRadius: PropTypes.number,
+// };

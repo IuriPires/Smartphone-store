@@ -12,7 +12,8 @@ export default function Detail() {
   const navigation = useNavigation();
   const route = useRoute();
   const {details} = route.params;
-  const [selectedValue, setSelectedValue] = useState();
+  const [selectedStorage, setSelectedStorage] = useState();
+  const [selectedColor, setSelectedColor] = useState();
 
   function navigateBackToList() {
     navigation.goBack();
@@ -23,7 +24,16 @@ export default function Detail() {
       message: 'Aqui o produto seria compartilhado',
     });
   }
-
+  function navigateToCart() {
+    if (selectedStorage && selectedColor) {
+      const payload = {
+        ...details,
+        selectedStorage,
+        selectedColor,
+      };
+      return navigation.navigate('Cart', {payload});
+    }
+  }
   return (
     <ScrollView style={styles.container}>
       <View style={styles.imageView}>
@@ -51,9 +61,9 @@ export default function Detail() {
         <View style={styles.detailsInputView}>
           <Text>Storage: </Text>
           <Picker
-            selectedValue={selectedValue}
+            selectedValue={selectedStorage}
             style={styles.picker}
-            onValueChange={itemValue => setSelectedValue(itemValue)}>
+            onValueChange={itemValue => setSelectedStorage(itemValue)}>
             {details.product.storage.map(storageSize => (
               <Picker.Item
                 key={storageSize}
@@ -67,9 +77,9 @@ export default function Detail() {
         <View style={styles.detailsInputView}>
           <Text>Colors: </Text>
           <Picker
-            selectedValue={selectedValue}
+            selectedValue={selectedColor}
             style={styles.picker}
-            onValueChange={itemValue => setSelectedValue(itemValue)}>
+            onValueChange={itemValue => setSelectedColor(itemValue)}>
             {details.product.colors.map(color => (
               <Picker.Item key={color} label={color} value={color} />
             ))}
@@ -81,7 +91,16 @@ export default function Detail() {
           <IconAw name="shopping-cart" size={30} color="#adb5bd" />
         </TouchableOpacity>
 
-        <Button width={'85%'} textPadding={12} borderRadius={0} color="#ef6537">
+        <Button
+          onPress={navigateToCart}
+          width={'85%'}
+          textPadding={12}
+          borderRadius={0}
+          backgroundColor={
+            selectedStorage && selectedColor
+              ? '#ef6537'
+              : 'rgba(239,101,55, 0.2)'
+          }>
           <Text style={styles.buttonText}>BUY NOW</Text>
         </Button>
       </View>

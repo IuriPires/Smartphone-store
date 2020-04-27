@@ -29,6 +29,10 @@ export default function ListItem({data}) {
               <Text style={styles.textName}>{item.product.name}</Text>
               <Text style={styles.textValue}>{item.values[0]}</Text>
               <Button
+                backgroundColor="#ef6537"
+                width={120}
+                textPadding={4}
+                borderRadius={20}
                 style={styles.button}
                 onPress={() => navigateToDetail(item)}>
                 <Text style={styles.textButton}>Buy now</Text>

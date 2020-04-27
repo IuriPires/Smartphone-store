@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#000',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'row',
   },
