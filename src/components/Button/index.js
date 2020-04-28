@@ -10,7 +10,6 @@ export default function Button({
   children,
   borderRadius,
 }) {
-  console.log(backgroundColor, 'Iuri');
   const styles = StyleSheet.create({
     button: {
       backgroundColor: backgroundColor,

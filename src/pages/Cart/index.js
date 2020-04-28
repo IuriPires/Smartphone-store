@@ -9,8 +9,6 @@ export default function Cart() {
   const route = useRoute();
   const details = route.params;
 
-  console.log(details);
-
   async function getCartItems() {
     // try {
     //   const value = await AsyncStorage.getItem('@MyApp_key');
@@ -20,5 +18,5 @@ export default function Cart() {
     // }
   }
 
-  return <View>{/* <ListItemsCart details={{products: details}} /> */}</View>;
+  return <View>{<ListItemsCart details={{products: details}} />}</View>;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {Text, View, TouchableOpacity} from 'react-native';
+import {Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
 import {styles} from './style';
 import ListItem from './../../components/ListItem';
 import data from './../../services/fakeAPI.json';
